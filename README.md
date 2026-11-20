@@ -2,7 +2,26 @@
 
 > **Tagline:** *"Skip the Wait, Manage Your Campus Services Smartly."*
 
-QueueEase is an enterprise-grade digital campus platform designed to simplify and automate university administrative services. It eliminates physical queues, avoids unnecessary student visits to college offices, provides real-time faculty & counter availability transparency, streamlines digital document applications (CAD), and enables secure online fee collection.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-QueueEase_Online-0D9488?style=for-the-badge&logo=render&logoColor=white)](https://queueease-project.onrender.com/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-ishanarora0901%2Fqueueease--project-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ishanarora0901/queueease-project)
+[![MERN Stack](https://img.shields.io/badge/Stack-MERN_%2B_Socket.io-4F46E5?style=for-the-badge)](https://github.com/ishanarora0901/queueease-project)
+
+---
+
+## 🌐 Live Application Link
+
+🚀 **Production Live URL:** [https://queueease-project.onrender.com/](https://queueease-project.onrender.com/)  
+🏛️ **Dedicated Admin Portal:** [https://queueease-project.onrender.com/admin/login](https://queueease-project.onrender.com/admin/login)
+
+### 🔑 Pre-Configured Demo Accounts (Ready to Test):
+
+| Role | Name | Email | Password | What You Can Test |
+|---|---|---|---|---|
+| **Student** | Aarav Patel | `student@queueease.edu` | `Student@123` | Book live tokens, track queue position, request CAD certificates, pay fees |
+| **Admin** | Dr. Vikram Singhania | `admin@queueease.edu` | `Admin@123` | Executive dashboard, live queue overrides, user management, audit logs |
+| **Admission Prof.** | Prof. Arvind Mehta | `fees.officer@queueease.edu` | `Staff@123` | Counter 1 Calling, Admission & Fee appointments |
+| **CAD Officer** | Mrs. Sunita Verma | `cad.officer@queueease.edu` | `Staff@123` | Counter 2 Calling, review & approve CAD certificate requests |
+| **Faculty Head** | Prof. Rajiv Sharma | `prof.sharma@queueease.edu` | `Staff@123` | Computer Science HOD student consultation bookings |
 
 ---
 
@@ -69,8 +88,8 @@ QueueEase is an enterprise-grade digital campus platform designed to simplify an
 
 ```bash
 # Clone the repository
-git clone <repo-url>
-cd live_project
+git clone https://github.com/ishanarora0901/queueease-project.git
+cd queueease-project
 
 # Configure Server Environment Variables
 cp server/.env.example server/.env
