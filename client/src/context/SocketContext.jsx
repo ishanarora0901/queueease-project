@@ -9,7 +9,11 @@ export const SocketProvider = ({ children }) => {
   const { user } = useAuth();
 
   useEffect(() => {
-    const socketInstance = io(window.location.origin, {
+    const socketEndpoint = import.meta.env.VITE_API_URL
+      ? import.meta.env.VITE_API_URL.replace(/\/$/, '')
+      : window.location.origin;
+
+    const socketInstance = io(socketEndpoint, {
       transports: ['websocket', 'polling'],
       reconnectionAttempts: 5,
     });

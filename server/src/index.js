@@ -77,7 +77,22 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/feedback', feedbackRoutes);
 
-// 404 handler
+// Serve static frontend build if present (for single-service deployment like Render / Railway)
+const clientDistPath = path.resolve('client', 'dist');
+app.use(express.static(clientDistPath));
+
+// Fallback for Single Page Application routing (non-API routes)
+app.get('*', (req, res, next) => {
+  if (req.originalUrl.startsWith('/api') || req.originalUrl.startsWith('/uploads')) {
+    return next();
+  }
+  const indexPath = path.join(clientDistPath, 'index.html');
+  res.sendFile(indexPath, (err) => {
+    if (err) next();
+  });
+});
+
+// 404 handler for API routes
 app.use('*', (req, res) => {
   res.status(404).json({ success: false, message: `Route ${req.originalUrl} not found on QueueEase server.` });
 });
