@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue.bold,teal.bold\" \"cd server && npm run dev\" \"cd client && npm run dev\"",
     "start": "node server/src/index.js",
-    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "build": "npm install --include=dev --prefix client && npm run build --prefix client && npm install --prefix server",
     "seed": "cd server && npm run seed"
   },
   "keywords": [
