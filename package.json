@@ -1,0 +1,30 @@
+{
+  "name": "queueease-smart-campus",
+  "version": "1.0.0",
+  "description": "QueueEase – Smart Campus Service Management System",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue.bold,teal.bold\" \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "start": "concurrently -n \"SERVER,CLIENT\" -c \"blue.bold,teal.bold\" \"cd server && npm start\" \"cd client && npm run dev\"",
+    "server": "cd server && npm run dev",
+    "server:start": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "build:client": "cd client && npm run build",
+    "seed": "cd server && npm run seed"
+  },
+  "keywords": [
+    "mern",
+    "queue-management",
+    "campus-erp",
+    "smart-campus",
+    "mongodb-atlas",
+    "socket-io",
+    "react-vite",
+    "tailwindcss"
+  ],
+  "author": "QueueEase Engineering Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
